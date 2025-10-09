@@ -9,7 +9,6 @@ namespace UserAuthenticationLab.Services
 {
 	public class PasswordHasher
 	{
-		// Твой вариант: MD4 (это нестандартный алгоритм в .NET, поэтому реализуем вручную)
 		public string ComputeMD4Hash(string input)
 		{
 			if (string.IsNullOrEmpty(input))
@@ -20,7 +19,6 @@ namespace UserAuthenticationLab.Services
 				byte[] inputBytes = Encoding.UTF8.GetBytes(input);
 				byte[] hashBytes = md4.ComputeHash(inputBytes);
 
-				// Конвертируем в hex-строку
 				return ByteArrayToHexString(hashBytes);
 			}
 		}
@@ -28,10 +26,10 @@ namespace UserAuthenticationLab.Services
 		public bool VerifyPassword(string inputPassword, string storedHash)
 		{
 			if (string.IsNullOrEmpty(inputPassword) && string.IsNullOrEmpty(storedHash))
-				return true; // Оба пустые
+				return true; 
 
 			if (string.IsNullOrEmpty(inputPassword) || string.IsNullOrEmpty(storedHash))
-				return false; // Один пустой, другой нет
+				return false; 
 
 			string inputHash = ComputeMD4Hash(inputPassword);
 			return string.Equals(inputHash, storedHash, StringComparison.OrdinalIgnoreCase);
@@ -42,7 +40,7 @@ namespace UserAuthenticationLab.Services
 			var sb = new StringBuilder();
 			foreach (byte b in bytes)
 			{
-				sb.Append(b.ToString("x2")); // x2 = hex в нижнем регистре
+				sb.Append(b.ToString("x2")); 
 			}
 			return sb.ToString();
 		}

@@ -27,7 +27,6 @@ namespace UserAuthenticationLab.Forms
 
 		private void LoadUsers()
 		{
-			// НАСТРАИВАЕМ СТОЛБЦЫ ПРИ ПЕРВОЙ ЗАГРУЗКЕ
 			if (dgvUsers.Columns.Count == 0)
 			{
 				dgvUsers.AutoGenerateColumns = false;
@@ -42,7 +41,6 @@ namespace UserAuthenticationLab.Forms
 				});
 			}
 
-			// ОЧИЩАЕМ И ЗАПОЛНЯЕМ ДАННЫЕ
 			dgvUsers.Rows.Clear();
 
 			foreach (var user in _appData.Users)
@@ -67,7 +65,7 @@ namespace UserAuthenticationLab.Forms
 					var newUser = new User
 					{
 						Username = form.Username,
-						PasswordHash = "", // пустой пароль
+						PasswordHash = "", 
 						IsBlocked = false,
 						PasswordRestrictions = false,
 						MinPasswordLength = 0,

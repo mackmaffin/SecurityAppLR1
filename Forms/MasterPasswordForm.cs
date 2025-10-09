@@ -33,7 +33,6 @@ namespace UserAuthenticationLab.Forms
 					return;
 				}
 
-				// Пытаемся загрузить данные
 				Program.AppData = Program.DataManager.LoadData(txtMasterPassword.Text);
 				IsAuthenticated = true;
 				Program.MasterPassword = txtMasterPassword.Text;

@@ -23,15 +23,12 @@ namespace UserAuthenticationLab
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-			// Запрашиваем парольную фразу
 			using (var masterForm = new MasterPasswordForm())
 			{
 				if (masterForm.ShowDialog() == DialogResult.OK && masterForm.IsAuthenticated)
 				{
-					// Запускаем основную форму входа
 					Application.Run(new LoginForm());
 
-					// При закрытии программы сохраняем данные
 					SaveDataBeforeExit();
 				}
 				else

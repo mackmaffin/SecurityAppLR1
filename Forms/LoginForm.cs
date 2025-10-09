@@ -29,7 +29,6 @@ namespace UserAuthenticationLab
 			string username = txtUsername.Text.Trim();
 			string password = txtPassword.Text;
 
-			// Проверяем пустые поля
 			if (string.IsNullOrEmpty(username))
 			{
 				MessageBox.Show("Введите имя пользователя!", "Ошибка",
@@ -37,7 +36,6 @@ namespace UserAuthenticationLab
 				return;
 			}
 
-			// Ищем пользователя в глобальных данных
 			var user = Program.AppData?.FindUser(username);
 			if (user == null)
 			{
@@ -55,7 +53,6 @@ namespace UserAuthenticationLab
 				return;
 			}
 
-			// Проверяем блокировку
 			if (user.IsBlocked)
 			{
 				MessageBox.Show("Учетная запись заблокирована. Обратитесь к администратору.",
@@ -64,7 +61,6 @@ namespace UserAuthenticationLab
 				return;
 			}
 
-			// Проверяем пароль
 			if (!_passwordHasher.VerifyPassword(password, user.PasswordHash))
 			{
 				_loginAttempts++;
@@ -82,7 +78,6 @@ namespace UserAuthenticationLab
 			}
 
 
-			// Проверяем срок действия пароля
 			if (user.PasswordExpiryMonths > 0 &&
 				DateTime.Now > user.PasswordSetDate.AddMonths(user.PasswordExpiryMonths))
 			{
@@ -90,10 +85,8 @@ namespace UserAuthenticationLab
 					"Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 
-			// Успешный вход - сбрасываем счетчик
 			_loginAttempts = 0;
 
-			// Открываем соответствующую форму
 			if (username.ToUpper() == AppConstants.ADMIN_USERNAME)
 			{
 				var adminForm = new AdminForm();
@@ -109,7 +102,6 @@ namespace UserAuthenticationLab
 				this.Show();
 			}
 
-			// Очищаем поля после возврата
 			txtPassword.Text = "";
 		}
 
@@ -126,7 +118,6 @@ namespace UserAuthenticationLab
 
 		private void SaveBeforeClosing()
 		{
-			// Сохраняем данные при закрытии
 			try
 			{
 				if (Program.DataManager != null && !string.IsNullOrEmpty(Program.MasterPassword))

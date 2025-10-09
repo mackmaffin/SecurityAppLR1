@@ -30,7 +30,6 @@ namespace UserAuthenticationLab.Forms
 		{
 			try
 			{
-				// Проверка старого пароля
 				if (!_passwordHasher.VerifyPassword(txtOldPassword.Text, _user.PasswordHash))
 				{
 					MessageBox.Show("Неверный старый пароль!", "Ошибка",
@@ -38,7 +37,6 @@ namespace UserAuthenticationLab.Forms
 					return;
 				}
 
-				// Проверка подтверждения
 				if (txtNewPassword.Text != txtConfirmPassword.Text)
 				{
 					MessageBox.Show("Новый пароль и подтверждение не совпадают!", "Ошибка",
@@ -46,7 +44,6 @@ namespace UserAuthenticationLab.Forms
 					return;
 				}
 
-				// Проверка минимальной длины
 				if (txtNewPassword.Text.Length < _user.MinPasswordLength)
 				{
 					MessageBox.Show($"Минимальная длина пароля: {_user.MinPasswordLength} символов!",
@@ -54,7 +51,6 @@ namespace UserAuthenticationLab.Forms
 					return;
 				}
 				
-				// Валидация пароля по варианту 1
 				if (_user.PasswordRestrictions && !PasswordValidator.ValidatePassword(txtNewPassword.Text))
 				{
 					MessageBox.Show("Пароль не соответствует требованиям!\n" +
@@ -63,14 +59,12 @@ namespace UserAuthenticationLab.Forms
 					return;
 				}
 
-				// Сохраняем новый пароль
 				_user.PasswordHash = _passwordHasher.ComputeMD4Hash(txtNewPassword.Text);
 				_user.PasswordSetDate = DateTime.Now;
 
 				MessageBox.Show("Пароль успешно изменен!", "Успех",
 					MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				// Очищаем поля
 				txtOldPassword.Text = "";
 				txtNewPassword.Text = "";
 				txtConfirmPassword.Text = "";

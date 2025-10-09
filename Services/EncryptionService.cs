@@ -44,7 +44,6 @@ namespace UserAuthenticationLab.Services
 			}
 			catch (Exception ex)
 			{
-				// TODO: Логирование ошибок
 				return false;
 			}
 		}
@@ -56,7 +55,6 @@ namespace UserAuthenticationLab.Services
 				if (!File.Exists(_dataFile))
 				{
 					var newData = new ApplicationData();
-					// Сохраняем с паролем "admin" по умолчанию
 					EncryptData(newData, "admin");
 					return newData;
 				}

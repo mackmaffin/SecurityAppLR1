@@ -29,8 +29,6 @@ namespace UserAuthenticationLab.Services
 
 		protected override void HashCore(byte[] array, int ibStart, int cbSize)
 		{
-			// Базовая реализация MD4 (для лабы сойдет)
-			// В продакшене лучше использовать стандартные алгоритмы
 			for (int i = 0; i < cbSize; i++)
 			{
 				int index = _bytesCount >> 2;
@@ -47,7 +45,6 @@ namespace UserAuthenticationLab.Services
 
 		protected override byte[] HashFinal()
 		{
-			// Добавляем padding
 			int padLength = (_bytesCount < 56) ? (56 - _bytesCount) : (120 - _bytesCount);
 			byte[] padding = new byte[padLength + 8];
 			padding[0] = 0x80;
@@ -76,7 +73,6 @@ namespace UserAuthenticationLab.Services
 		{
 			uint a = _a, b = _b, c = _c, d = _d;
 
-			// Round 1
 			for (int i = 0; i < 16; i++)
 			{
 				uint f = (b & c) | (~b & d);
@@ -85,7 +81,6 @@ namespace UserAuthenticationLab.Services
 				(a, b, c, d) = (d, a, b, c);
 			}
 
-			// Round 2  
 			for (int i = 0; i < 16; i++)
 			{
 				uint f = (b & c) | (b & d) | (c & d);
@@ -94,7 +89,6 @@ namespace UserAuthenticationLab.Services
 				(a, b, c, d) = (d, a, b, c);
 			}
 
-			// Round 3
 			for (int i = 0; i < 16; i++)
 			{
 				uint f = b ^ c ^ d;
