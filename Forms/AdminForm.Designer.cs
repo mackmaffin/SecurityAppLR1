@@ -33,12 +33,12 @@
 			this.добавитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.блокироватьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.изменитьПароляАдминаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.dgvUsers = new System.Windows.Forms.DataGridView();
 			this.btnAddUser = new System.Windows.Forms.Button();
 			this.btnBlockUser = new System.Windows.Forms.Button();
 			this.btnChangeAdminPassword = new System.Windows.Forms.Button();
-			this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
 			this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.справкаToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(800, 30);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -62,7 +62,7 @@
             this.блокироватьПользователяToolStripMenuItem,
             this.изменитьПароляАдминаToolStripMenuItem});
 			this.главноеМенюToolStripMenuItem.Name = "главноеМенюToolStripMenuItem";
-			this.главноеМенюToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+			this.главноеМенюToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
 			this.главноеМенюToolStripMenuItem.Text = "Главное меню";
 			// 
 			// добавитьПользователяToolStripMenuItem
@@ -82,6 +82,21 @@
 			this.изменитьПароляАдминаToolStripMenuItem.Name = "изменитьПароляАдминаToolStripMenuItem";
 			this.изменитьПароляАдминаToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
 			this.изменитьПароляАдминаToolStripMenuItem.Text = "Изменить пароля админа";
+			// 
+			// справкаToolStripMenuItem
+			// 
+			this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оПрограммеToolStripMenuItem1});
+			this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+			this.справкаToolStripMenuItem.Size = new System.Drawing.Size(81, 26);
+			this.справкаToolStripMenuItem.Text = "Справка";
+			// 
+			// оПрограммеToolStripMenuItem1
+			// 
+			this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
+			this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
+			this.оПрограммеToolStripMenuItem1.Text = "О программе";
+			this.оПрограммеToolStripMenuItem1.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
 			// 
 			// dgvUsers
 			// 
@@ -124,21 +139,6 @@
 			this.btnChangeAdminPassword.UseVisualStyleBackColor = true;
 			this.btnChangeAdminPassword.Click += new System.EventHandler(this.btnChangeAdminPassword_Click);
 			// 
-			// справкаToolStripMenuItem
-			// 
-			this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.оПрограммеToolStripMenuItem1});
-			this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-			this.справкаToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-			this.справкаToolStripMenuItem.Text = "Справка";
-			// 
-			// оПрограммеToolStripMenuItem1
-			// 
-			this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-			this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-			this.оПрограммеToolStripMenuItem1.Text = "О программе";
-			this.оПрограммеToolStripMenuItem1.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
-			// 
 			// AdminForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,7 +151,7 @@
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "AdminForm";
-			this.Text = "AdminForm";
+			this.Text = "Форма администратора";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();

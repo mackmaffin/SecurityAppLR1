@@ -105,7 +105,7 @@
 			this.Controls.Add(this.txtOldPassword);
 			this.Controls.Add(this.lblUserInfo);
 			this.Name = "UserForm";
-			this.Text = "UserForm";
+			this.Text = "Форма пользователя";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
