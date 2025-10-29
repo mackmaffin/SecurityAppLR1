@@ -1,0 +1,13 @@
+D:\Desktop\Уник\ИБ\SecurityAppLR2\bin\Debug\SecurityAppLR2.exe.config
+D:\Desktop\Уник\ИБ\SecurityAppLR2\bin\Debug\SecurityAppLR2.exe
+D:\Desktop\Уник\ИБ\SecurityAppLR2\bin\Debug\SecurityAppLR2.pdb
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.csproj.AssemblyReference.cache
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.Properties.Resources.resources
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.UI.AlgorithmForm.resources
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.UI.MainForm.resources
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.UI.StepForm.resources
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.csproj.GenerateResource.cache
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.csproj.CoreCompileInputs.cache
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.exe
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.pdb
+D:\Desktop\Уник\ИБ\SecurityAppLR2\obj\Debug\SecurityAppLR2.exe.config
