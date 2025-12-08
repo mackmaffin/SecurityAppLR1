@@ -30,9 +30,6 @@
 		{
 			this.txtInfo = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
-			// 
-			// txtInfo
-			// 
 			this.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txtInfo.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.txtInfo.Location = new System.Drawing.Point(0, 0);
@@ -42,9 +39,6 @@
 			this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.txtInfo.Size = new System.Drawing.Size(622, 433);
 			this.txtInfo.TabIndex = 0;
-			// 
-			// AlgorithmForm
-			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(622, 433);
